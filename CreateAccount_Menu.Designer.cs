@@ -45,6 +45,7 @@ namespace Calander
             this.Create_Account_Submit.TabIndex = 0;
             this.Create_Account_Submit.Text = "Create Account";
             this.Create_Account_Submit.UseVisualStyleBackColor = true;
+            this.Create_Account_Submit.Click += new System.EventHandler(this.Create_Account_Submit_Click);
             // 
             // textBox1
             // 
@@ -52,6 +53,7 @@ namespace Calander
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(176, 23);
             this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -59,6 +61,7 @@ namespace Calander
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(176, 23);
             this.textBox2.TabIndex = 2;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // Username
             // 
@@ -68,6 +71,7 @@ namespace Calander
             this.Username.Size = new System.Drawing.Size(63, 15);
             this.Username.TabIndex = 3;
             this.Username.Text = "Username:";
+            this.Username.Click += new System.EventHandler(this.Username_Click);
             // 
             // Password
             // 
@@ -77,6 +81,7 @@ namespace Calander
             this.Password.Size = new System.Drawing.Size(60, 15);
             this.Password.TabIndex = 4;
             this.Password.Text = "Password:";
+            this.Password.Click += new System.EventHandler(this.Password_Click);
             // 
             // label1
             // 
@@ -102,6 +107,7 @@ namespace Calander
             this.Controls.Add(this.Create_Account_Submit);
             this.Name = "CreateAccount_Menu";
             this.Text = "Create Account";
+            this.Load += new System.EventHandler(this.CreateAccount_Menu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -14,5 +14,35 @@ namespace Calander
         {
             InitializeComponent();
         }
+
+        private void CreateAccount_Menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Username_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Password_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Create_Account_Submit_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

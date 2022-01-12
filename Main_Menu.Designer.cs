@@ -46,6 +46,7 @@ namespace Calander
             this.Login_Button.TabIndex = 0;
             this.Login_Button.Text = "Login";
             this.Login_Button.UseVisualStyleBackColor = true;
+            this.Login_Button.Click += new System.EventHandler(this.Login_Button_Click);
             // 
             // CreateAccount_Button
             // 
@@ -55,6 +56,7 @@ namespace Calander
             this.CreateAccount_Button.TabIndex = 1;
             this.CreateAccount_Button.Text = "Create Account";
             this.CreateAccount_Button.UseVisualStyleBackColor = true;
+            this.CreateAccount_Button.Click += new System.EventHandler(this.CreateAccount_Button_Click);
             // 
             // Password_login
             // 
@@ -62,6 +64,7 @@ namespace Calander
             this.Password_login.Name = "Password_login";
             this.Password_login.Size = new System.Drawing.Size(237, 23);
             this.Password_login.TabIndex = 2;
+            this.Password_login.TextChanged += new System.EventHandler(this.Password_login_TextChanged);
             // 
             // Username_login
             // 
@@ -69,6 +72,7 @@ namespace Calander
             this.Username_login.Name = "Username_login";
             this.Username_login.Size = new System.Drawing.Size(237, 23);
             this.Username_login.TabIndex = 3;
+            this.Username_login.TextChanged += new System.EventHandler(this.Username_login_TextChanged);
             // 
             // label1
             // 
@@ -78,6 +82,7 @@ namespace Calander
             this.label1.Size = new System.Drawing.Size(57, 15);
             this.label1.TabIndex = 4;
             this.label1.Text = "Password";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -87,6 +92,7 @@ namespace Calander
             this.label2.Size = new System.Drawing.Size(60, 15);
             this.label2.TabIndex = 5;
             this.label2.Text = "Username";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Title
             // 
@@ -97,6 +103,7 @@ namespace Calander
             this.Title.Size = new System.Drawing.Size(252, 76);
             this.Title.TabIndex = 6;
             this.Title.Text = "Planner ";
+            this.Title.Click += new System.EventHandler(this.Title_Click);
             // 
             // Menu
             // 
@@ -113,6 +120,7 @@ namespace Calander
             this.Controls.Add(this.Login_Button);
             this.Name = "Menu";
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.Menu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
