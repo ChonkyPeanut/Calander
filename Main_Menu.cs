@@ -10,9 +10,6 @@ namespace Calander
 {
     public partial class Menu : Form
     {
-        private DataTable _loginUsername = new DataTable();
-
-        private DataTable _loginPassword = new DataTable();
         public Menu()
         {
             InitializeComponent();
