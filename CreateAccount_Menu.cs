@@ -43,9 +43,9 @@ namespace Calander
 
         private void Create_Account_Submit_Click(object sender, EventArgs e)
         {
-            TextWriter txt = new StreamWriter("C:\\demo\\demo.txt");
-            txt.Write(textBox1_TextChanged.Text);
-            txt.Close;
+            Month_Select frmImport = new Month_Select();
+
+            frmImport.ShowDialog();
         }
     }
 }

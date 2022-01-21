@@ -45,6 +45,7 @@ namespace Calander
             this.January.TabIndex = 0;
             this.January.Text = "January";
             this.January.UseVisualStyleBackColor = true;
+            this.January.Click += new System.EventHandler(this.January_Click);
             // 
             // Febuary
             // 
@@ -54,6 +55,7 @@ namespace Calander
             this.Febuary.TabIndex = 1;
             this.Febuary.Text = "Febuary";
             this.Febuary.UseVisualStyleBackColor = true;
+            this.Febuary.Click += new System.EventHandler(this.Febuary_Click);
             // 
             // March
             // 
@@ -63,6 +65,7 @@ namespace Calander
             this.March.TabIndex = 2;
             this.March.Text = "March";
             this.March.UseVisualStyleBackColor = true;
+            this.March.Click += new System.EventHandler(this.March_Click);
             // 
             // April
             // 
@@ -72,6 +75,7 @@ namespace Calander
             this.April.TabIndex = 3;
             this.April.Text = "April";
             this.April.UseVisualStyleBackColor = true;
+            this.April.Click += new System.EventHandler(this.April_Click);
             // 
             // May
             // 
@@ -81,6 +85,7 @@ namespace Calander
             this.May.TabIndex = 4;
             this.May.Text = "May";
             this.May.UseVisualStyleBackColor = true;
+            this.May.Click += new System.EventHandler(this.May_Click);
             // 
             // June
             // 
@@ -90,6 +95,7 @@ namespace Calander
             this.June.TabIndex = 5;
             this.June.Text = "June";
             this.June.UseVisualStyleBackColor = true;
+            this.June.Click += new System.EventHandler(this.June_Click);
             // 
             // Month_Select
             // 
@@ -105,6 +111,7 @@ namespace Calander
             this.Controls.Add(this.January);
             this.Name = "Month_Select";
             this.Text = "Month_Select";
+            this.Load += new System.EventHandler(this.Month_Select_Load);
             this.ResumeLayout(false);
 
         }
