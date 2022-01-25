@@ -11,54 +11,99 @@ namespace Calander
     public partial class January : Form
     {
 
-        string _january = string.Empty;
+        private ImageList imageListJan;
+        private int currentImage = 0;
+        protected Graphics myGraphics;
+        private OpenFileDialog openFileDialog1;
 
         public January()
         {
             InitializeComponent();
+            imageListJan = new ImageList();
+
+            imageListJan.ImageSize = new Size(300,300);
+            imageListJan.TransparentColor = Color.White;
+
+            myGraphics = Graphics.FromHwnd(panel1.Handle);
         }
 
         private void January_Load(object sender, EventArgs e)
         {
-            this.CenterToScreen();
-            this.SetControls();
-        }
-
-        private void SetControls()
-        {
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
 
         }
 
-        private void Close_Click(object sender, EventArgs e)
+        private void Find_Click(object sender, EventArgs e)
         {
-            this.Dispose();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void Open_File_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openDialog = new OpenFileDialog();
-
-            openDialog.Title = "Select Calander Excel file";
-
-            openDialog.Filter = "Excel 7.0 (*.xlsx)|*.xlsx" + "|" + "Excel (*.xls)|*.xls" + "|" + "CSV (*.csv)|*.csv" + "|" + "All Files (*.*)|*.*";
-
-            if (openDialog.ShowDialog() == DialogResult.OK)
+            openFileDialog1.Multiselect = true;
+            if(openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                _january = openDialog.FileName;
+                if(openFileDialog1.FileNames != null)
+                {
+                    for(int i = 0; i < openFileDialog1.FileNames.Length; i++)
+                    {
+                        addImage(openFileDialog1.FileNames[i]);
+                    }
+                }
+                else
+                {
+                    addImage(openFileDialog1.FileName);
+                }
             }
         }
 
-        private void Import_Click_1(object sender, EventArgs e)
+        private void addImage(string imageToLoad)
         {
-            
+            if(imageToLoad != "")
+            {
+
+            }
+        }
+
+        private void Display_Click(object sender, EventArgs e)
+        {
+            if(imageListJan.Images.Empty != true)
+            {
+                if(imageListJan.Images.Count-1 > currentImage)
+                {
+                    currentImage++;
+                }
+                else
+                {
+                    currentImage = 0;
+                }
+                panel1.Refresh();
+
+                imageListJan.Draw(myGraphics, 10, 10, currentImage);
+
+                pictureBox1.Image = imageListJan.Images[currentImage];
+                listBox1.SelectedIndex = currentImage;
+            }
+        }
+
+        private void Remove_Click(object sender, EventArgs e)
+        {
+            imageListJan.Images.Clear();
+            listBox1.Items.Clear();
+        }
+
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

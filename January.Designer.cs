@@ -29,86 +29,121 @@ namespace Calander
         /// </summary>
         private void InitializeComponent()
         {
-            this.Close = new System.Windows.Forms.Button();
-            this.Impor_Jan = new System.Windows.Forms.Label();
-            this.Import = new System.Windows.Forms.Button();
-            this.Open_File = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.components = new System.ComponentModel.Container();
+            this.Clear = new System.Windows.Forms.Button();
+            this.Display = new System.Windows.Forms.Button();
+            this.Remove = new System.Windows.Forms.Button();
+            this.Find = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // Close
+            // Clear
             // 
-            this.Close.Location = new System.Drawing.Point(403, 24);
-            this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(123, 55);
-            this.Close.TabIndex = 1;
-            this.Close.Text = "Close";
-            this.Close.UseVisualStyleBackColor = true;
-            this.Close.Click += new System.EventHandler(this.Close_Click);
+            this.Clear.Location = new System.Drawing.Point(411, 369);
+            this.Clear.Name = "Clear";
+            this.Clear.Size = new System.Drawing.Size(129, 69);
+            this.Clear.TabIndex = 0;
+            this.Clear.Text = "Clear";
+            this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
-            // Impor_Jan
+            // Display
             // 
-            this.Impor_Jan.Location = new System.Drawing.Point(0, 0);
-            this.Impor_Jan.Name = "Impor_Jan";
-            this.Impor_Jan.Size = new System.Drawing.Size(100, 23);
-            this.Impor_Jan.TabIndex = 7;
+            this.Display.Location = new System.Drawing.Point(12, 369);
+            this.Display.Name = "Display";
+            this.Display.Size = new System.Drawing.Size(182, 69);
+            this.Display.TabIndex = 1;
+            this.Display.Text = "Display";
+            this.Display.UseVisualStyleBackColor = true;
+            this.Display.Click += new System.EventHandler(this.Display_Click);
             // 
-            // Import
+            // Remove
             // 
-            this.Import.Location = new System.Drawing.Point(48, 146);
-            this.Import.Name = "Import";
-            this.Import.Size = new System.Drawing.Size(477, 28);
-            this.Import.TabIndex = 5;
-            this.Import.Text = "Import";
-            this.Import.UseVisualStyleBackColor = true;
-            this.Import.Click += new System.EventHandler(this.Import_Click_1);
+            this.Remove.Location = new System.Drawing.Point(210, 369);
+            this.Remove.Name = "Remove";
+            this.Remove.Size = new System.Drawing.Size(182, 69);
+            this.Remove.TabIndex = 2;
+            this.Remove.Text = "Remove";
+            this.Remove.UseVisualStyleBackColor = true;
+            this.Remove.Click += new System.EventHandler(this.Remove_Click);
             // 
-            // Open_File
+            // Find
             // 
-            this.Open_File.Location = new System.Drawing.Point(48, 112);
-            this.Open_File.Name = "Open_File";
-            this.Open_File.Size = new System.Drawing.Size(477, 28);
-            this.Open_File.TabIndex = 6;
-            this.Open_File.Text = "Open File";
-            this.Open_File.UseVisualStyleBackColor = true;
-            this.Open_File.Click += new System.EventHandler(this.Open_File_Click);
+            this.Find.Location = new System.Drawing.Point(12, 333);
+            this.Find.Name = "Find";
+            this.Find.Size = new System.Drawing.Size(527, 26);
+            this.Find.TabIndex = 3;
+            this.Find.Text = "Find Image";
+            this.Find.UseVisualStyleBackColor = true;
+            this.Find.Click += new System.EventHandler(this.Find_Click);
             // 
-            // dataGridView1
+            // pictureBox1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(48, 186);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(479, 252);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(526, 126);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(12, 158);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(198, 155);
+            this.panel1.TabIndex = 5;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 15;
+            this.listBox1.Location = new System.Drawing.Point(224, 159);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(176, 154);
+            this.listBox1.TabIndex = 6;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // January
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(582, 450);
-            this.Controls.Add(this.Open_File);
-            this.Controls.Add(this.Import);
-            this.Controls.Add(this.Impor_Jan);
-            this.Controls.Add(this.Close);
-            this.Controls.Add(this.dataGridView1);
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ClientSize = new System.Drawing.Size(552, 450);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.Find);
+            this.Controls.Add(this.Remove);
+            this.Controls.Add(this.Display);
+            this.Controls.Add(this.Clear);
             this.Name = "January";
             this.Text = "January";
             this.Load += new System.EventHandler(this.January_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button Close;
-        private System.Windows.Forms.Label Impor_Jan;
-        private System.Windows.Forms.TextBox txtFile;
-        private System.Windows.Forms.Button Import;
-        private System.Windows.Forms.Button Open_File;
-        private System.Windows.Forms.DataGridView dataGridView1;
+
+        private System.Windows.Forms.Button Clear;
+        private System.Windows.Forms.Button Display;
+        private System.Windows.Forms.Button Remove;
+        private System.Windows.Forms.Button Find;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
