@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Calander
 {
-    public partial class January : Form
+    public partial class Months : Form
     {
 
         private ImageList imageListJan;
@@ -16,12 +16,12 @@ namespace Calander
         protected Graphics myGraphics;
         private OpenFileDialog openFileDialog1;
 
-        public January()
+        public Months()
         {
             InitializeComponent();
             imageListJan = new ImageList();
 
-            imageListJan.ImageSize = new Size(300,300);
+            imageListJan.ImageSize = new Size(200,200);
             imageListJan.TransparentColor = Color.White;
 
             myGraphics = Graphics.FromHwnd(panel1.Handle);
@@ -55,7 +55,10 @@ namespace Calander
         {
             if(imageToLoad != "")
             {
-
+                imageListJan.Images.Add(Image.FromFile(imageToLoad));
+                listBox1.BeginUpdate();
+                listBox1.Items.Add(imageToLoad);
+                listBox1.EndUpdate();
             }
         }
 

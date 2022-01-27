@@ -28,12 +28,14 @@ namespace Calander
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-
+            float username;
+            username = float.Parse(textBox2.Text);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            float password;
+            password = float.Parse(textBox1.Text);
         }
 
         private void Password_Click(object sender, EventArgs e)
@@ -43,9 +45,22 @@ namespace Calander
 
         private void Create_Account_Submit_Click(object sender, EventArgs e)
         {
-            Month_Select frmImport = new Month_Select();
+            this.Close();
+        }
 
-            frmImport.ShowDialog();
+        public void account(string username, string password)
+        {
+
+        }
+
+        private void username(float username)
+        {
+            return;
+        }
+        
+        private void password(float password)
+        {
+            return;
         }
     }
 }

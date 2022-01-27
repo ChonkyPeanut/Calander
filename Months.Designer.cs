@@ -1,7 +1,7 @@
 ﻿
 namespace Calander
 {
-    partial class January
+    partial class Months
     {
         /// <summary>
         /// Required designer variable.
@@ -38,7 +38,9 @@ namespace Calander
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Clear
@@ -83,9 +85,9 @@ namespace Calander
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 17);
+            this.pictureBox1.Location = new System.Drawing.Point(0, -146);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(526, 126);
+            this.pictureBox1.Size = new System.Drawing.Size(526, 107);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -98,9 +100,10 @@ namespace Calander
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(12, 158);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(198, 155);
+            this.panel1.Size = new System.Drawing.Size(527, 280);
             this.panel1.TabIndex = 5;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -108,9 +111,10 @@ namespace Calander
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(224, 159);
+            this.listBox1.Location = new System.Drawing.Point(12, 308);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(176, 154);
+            this.listBox1.Size = new System.Drawing.Size(526, 19);
+            this.listBox1.Sorted = true;
             this.listBox1.TabIndex = 6;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -122,7 +126,6 @@ namespace Calander
             this.ClientSize = new System.Drawing.Size(552, 450);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Find);
             this.Controls.Add(this.Remove);
             this.Controls.Add(this.Display);
@@ -131,6 +134,7 @@ namespace Calander
             this.Text = "January";
             this.Load += new System.EventHandler(this.January_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
