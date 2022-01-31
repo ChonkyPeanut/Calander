@@ -11,6 +11,8 @@ namespace Calander
 {
     public partial class CreateAccount_Menu : Form
     {
+        public string username;
+        public string password;
         public CreateAccount_Menu()
         {
             InitializeComponent();
@@ -28,14 +30,15 @@ namespace Calander
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            float username;
-            username = float.Parse(textBox2.Text);
+            username = textBox2.Text;
+            label4.Text = textBox2.Text;
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            float password;
-            password = float.Parse(textBox1.Text);
+            password = textBox1.Text;
+            label3.Text = textBox1.Text;
         }
 
         private void Password_Click(object sender, EventArgs e)
@@ -45,22 +48,23 @@ namespace Calander
 
         private void Create_Account_Submit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            MessageBox.Show("Username: " + username + " " + "Password: " + password);
         }
 
-        public void account(string username, string password)
+        public void GetAccount()
+        {
+            password = textBox1.Text;
+            username = textBox2.Text;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void username(float username)
+        private void label4_Click(object sender, EventArgs e)
         {
-            return;
-        }
-        
-        private void password(float password)
-        {
-            return;
+
         }
     }
 }

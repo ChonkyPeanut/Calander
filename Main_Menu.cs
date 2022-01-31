@@ -10,6 +10,8 @@ namespace Calander
 {
     public partial class Menu : Form
     {
+        public string usernameLogin;
+        public string passwordLogin;
         public Menu()
         {
             InitializeComponent();
@@ -22,7 +24,7 @@ namespace Calander
 
         private void Username_login_TextChanged(object sender, EventArgs e)
         {
-
+            usernameLogin = Username_login.Text;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -37,7 +39,7 @@ namespace Calander
 
         private void Password_login_TextChanged(object sender, EventArgs e)
         {
-
+            passwordLogin = Password_login.Text;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -47,9 +49,7 @@ namespace Calander
 
         private void Login_Button_Click(object sender, EventArgs e)
         {
-            Months frmImport = new Months();
-
-            frmImport.ShowDialog();
+           
         }
 
         private void CreateAccount_Button_Click(object sender, EventArgs e)
