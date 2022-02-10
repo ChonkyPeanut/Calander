@@ -35,6 +35,7 @@ namespace Calander
         private void Find_Click(object sender, EventArgs e)
         {
             openFileDialog1.Multiselect = true;
+
             if(openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 if(openFileDialog1.FileNames != null)
@@ -74,6 +75,7 @@ namespace Calander
                 {
                     currentImage = 0;
                 }
+
                 panel1.Refresh();
 
                 imageListJan.Draw(myGraphics, 10, 10, currentImage);

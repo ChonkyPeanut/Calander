@@ -38,6 +38,7 @@ namespace Calander
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.Close = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Create_Account_Submit
@@ -95,6 +96,7 @@ namespace Calander
             this.label1.Size = new System.Drawing.Size(311, 54);
             this.label1.TabIndex = 5;
             this.label1.Text = "Create Account";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -122,12 +124,23 @@ namespace Calander
             this.label4.TabIndex = 8;
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
+            // Close
+            // 
+            this.Close.Location = new System.Drawing.Point(300, 378);
+            this.Close.Name = "Close";
+            this.Close.Size = new System.Drawing.Size(118, 60);
+            this.Close.TabIndex = 9;
+            this.Close.Text = "Close";
+            this.Close.UseVisualStyleBackColor = true;
+            this.Close.Click += new System.EventHandler(this.Close_Click);
+            // 
             // CreateAccount_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(430, 450);
+            this.Controls.Add(this.Close);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -156,5 +169,6 @@ namespace Calander
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button Close;
     }
 }
