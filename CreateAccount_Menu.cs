@@ -56,12 +56,6 @@ namespace Calander
             MessageBox.Show("Username: " + username + " " + "Password: " + password);
         }
 
-        public void GetAccount()
-        {
-            password = textBox1.Text;
-            username = textBox2.Text;
-        }
-
         private void label3_Click(object sender, EventArgs e)
         {
 

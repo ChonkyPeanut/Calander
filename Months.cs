@@ -11,7 +11,7 @@ namespace Calander
     public partial class Months : Form
     {
 
-        private ImageList imageListJan;
+        private ImageList imageListMonth;
         private int currentImage = 0;
         protected Graphics myGraphics;
         private OpenFileDialog openFileDialog1;
@@ -19,10 +19,10 @@ namespace Calander
         public Months()
         {
             InitializeComponent();
-            imageListJan = new ImageList();
+            imageListMonth = new ImageList();
 
-            imageListJan.ImageSize = new Size(200,200);
-            imageListJan.TransparentColor = Color.White;
+            imageListMonth.ImageSize = new Size(200,200);
+            imageListMonth.TransparentColor = Color.White;
 
             myGraphics = Graphics.FromHwnd(panel1.Handle);
         }
@@ -56,7 +56,7 @@ namespace Calander
         {
             if(imageToLoad != "")
             {
-                imageListJan.Images.Add(Image.FromFile(imageToLoad));
+                imageListMonth.Images.Add(Image.FromFile(imageToLoad));
                 listBox1.BeginUpdate();
                 listBox1.Items.Add(imageToLoad);
                 listBox1.EndUpdate();
@@ -65,9 +65,9 @@ namespace Calander
 
         private void Display_Click(object sender, EventArgs e)
         {
-            if(imageListJan.Images.Empty != true)
+            if(imageListMonth.Images.Empty != true)
             {
-                if(imageListJan.Images.Count-1 > currentImage)
+                if(imageListMonth.Images.Count-1 > currentImage)
                 {
                     currentImage++;
                 }
@@ -78,16 +78,16 @@ namespace Calander
 
                 panel1.Refresh();
 
-                imageListJan.Draw(myGraphics, 10, 10, currentImage);
+                imageListMonth.Draw(myGraphics, 10, 10, currentImage);
 
-                pictureBox1.Image = imageListJan.Images[currentImage];
+                pictureBox1.Image = imageListMonth.Images[currentImage];
                 listBox1.SelectedIndex = currentImage;
             }
         }
 
         private void Remove_Click(object sender, EventArgs e)
         {
-            imageListJan.Images.Clear();
+            imageListMonth.Images.Clear();
             listBox1.Items.Clear();
         }
 
